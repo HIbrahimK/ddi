@@ -3,11 +3,15 @@ Test.py dosyası çalıştırıldığında metnin kökünü bulma, yanlış yaz�
 
 
 print("sadece kökler : " , preprocess("deneme metin buraya yazilacak ekini kökünü bulmaca. Uzun bir metin ile denemeler, yapılabilir mi?"))
+
 print("Kelimenin en düzgün hali", correction.correction("anahtrlık"))
+
 print("Kelimenin olası halleri", correction.candidates("Türkcesi"))
 
 sadece kökler :   deneme metin bura yaz ekin kök bulmaca uzun bir metin ile deneme yap mi
+
 Kelimenin en düzgün hali anahtarlık
+
 Kelimenin olası halleri {'ürkmesi', 'türkçesi'}
 
 
