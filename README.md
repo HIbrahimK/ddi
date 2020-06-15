@@ -11,10 +11,10 @@ Test.py dosyası çalıştırıldığında metnin kökünü bulma, yanlış yaz�
 
 
 # Projenin Öözellikleri
-1 Yazım Denetimi 
-2 
-3
-4
+1. Yazım Denetimi 
+2. 
+3.
+4.
 
 
 
