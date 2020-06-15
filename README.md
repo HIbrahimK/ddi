@@ -10,7 +10,7 @@ Test.py dosyası çalıştırıldığında metnin kökünü bulma, yanlış yaz�
 6.
 
 
-# Projenin Öözellikleri
+# Projenin Özellikleri
 1. Yazım Denetimi 
 2. 
 3.
