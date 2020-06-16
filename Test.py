@@ -44,8 +44,8 @@ delete_list = [",", "’"]
 #yöntem 1 iyi çalışmıyor
 #print("sadece kökler : " , preprocess("deneme metin buraya yazilacak ekini kökünü bulmaca. Uzun bir metin ile denemeler, yapılabilir mi?"))
 #print(Util.delete_characters("Makale, herhangi bir konuda, bir görüşü, bir düşünceyi savunmak ve kanıtlamak için yazılan yazılara denir. Gazete ve dergilerde yayımlanır. Bir gerçeği açıklamak, bir konuda görüş ve düşünceler öne sürmek ya da bir tezi savunmak, desteklemek için yazılan yazılara da ""makale"" denir.",delete_list))
-print("Kelimenin en düzgün hali", correction.correction("Yuzelli"))
-print("Kelimenin olası halleri", correction.candidates("Yuzelli"))
+print("Kelimenin en düzgün hali", correction.correction("Yüzelli"))
+print("Kelimenin olası halleri", correction.candidates("Yüzelli"))
 
 # print("Kelimenin olası halleri", correction.edits1("Türkcesi"))
 # print("Kelimenin olası halleri", correction.edits2("Türkcesi"))
@@ -56,9 +56,18 @@ print(TurkceKontrol(ornekMetin))
 obj = detector.TurkishNLP()
 #obj.download()
 obj.create_word_set()
-print(obj.is_turkish("Ben bugün ankaraya gideceğim belki birşeyler alırım"))
-lwords = obj.list_words("vri kümsi idrae edre ancaka daha güezl oalbilir")
+print(obj.is_turkish("Yüzelli Ben bugün ankaraya gideceğim belki birşeyler alırım"))
+lwords = obj.list_words("vri kumsi idrae edre ancaka daha güezl oalbılır")
 print(obj.auto_correct(lwords))
+
+lwords = "Yuzelli vri kümsi idrae edre ancaka daha güezl oalbılır"
+deasciifier = Deasciifier(lwords)
+my_deasciified_turkish_txt = deasciifier.convert_to_turkish()
+lwords = obj.list_words(my_deasciified_turkish_txt)
+
+print(obj.auto_correct(lwords))
+
+
 lwords = obj.list_words(ornekMetin)
 print(obj.auto_correct(lwords))
 

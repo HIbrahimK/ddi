@@ -32,3 +32,5 @@ Kelimenin olası halleri {'ürkmesi', 'türkçesi'}
 
 
 
+Sayılar Nasıl Yazılır?
+http://tdk.gov.tr/icerik/yazim-kurallari/sayilarin-yazilisi/
