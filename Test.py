@@ -3,6 +3,7 @@ import Util
 from spell_correction import correction
 from pathlib import Path
 from turkishnlp import detector
+from deasciifier import Deasciifier
 
 src_folder = Path("./")
 #stopwords = Util.read_file(Path(src_folder / "stopwords")).split("\n")
@@ -48,8 +49,8 @@ print("Kelimenin olası halleri", correction.candidates("Yuzelli"))
 
 # print("Kelimenin olası halleri", correction.edits1("Türkcesi"))
 # print("Kelimenin olası halleri", correction.edits2("Türkcesi"))
-ornekMetin="Bugun dunya kadinlar gunu. Yuzelli yil once calisan kadinlarin daha iyi calisma kosullari ve erkeklerle esit haklar elde etmek icin ABD'de baslattiklari, 19. yuzyilin baslarinda Avrupa'ya da yayilan kadin hareketinin anisina kutlanan gun."
-#print(TurkceKontrol(ornekMetin))
+ornekMetin="Bugun dunya kadinlar gunu. Yuzelli yil once calisan kadinlarin daha iyi çalşıma kosullari ve erkeklerle esit haklar elde etmek icin ABD'de baslattiklari, 19. yuzyilin baslarinda Avrupa'ya da yayilan kadin hareketinin anisina kutlanan gun."
+print(TurkceKontrol(ornekMetin))
 #Yontem 2
 
 obj = detector.TurkishNLP()
@@ -60,3 +61,12 @@ lwords = obj.list_words("vri kümsi idrae edre ancaka daha güezl oalbilir")
 print(obj.auto_correct(lwords))
 lwords = obj.list_words(ornekMetin)
 print(obj.auto_correct(lwords))
+
+my_ascii_turkish_txt = ornekMetin
+deasciifier = Deasciifier(my_ascii_turkish_txt)
+my_deasciified_turkish_txt = deasciifier.convert_to_turkish()
+print(my_deasciified_turkish_txt)
+lwords = obj.list_words(my_deasciified_turkish_txt)
+print(obj.auto_correct(lwords))
+print(TurkceKontrol(my_deasciified_turkish_txt))
+
