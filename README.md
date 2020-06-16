@@ -16,7 +16,7 @@ Kelimenin olası halleri {'ürkmesi', 'türkçesi'}
 
 
 # Yapılacaklar:
-1. Proje İsmi Bulunacak. Önerilrinizi Yazabilirsiniz
+1. Proje İsmi Bulunacak. Önerilerinizi Yazabilirsiniz
 2. Proje Ekibi İsmi Bulunacak. Önerilerinizi yazabilirsiniz
 3. Proje Özellikleri Neler Olacağı yazılacak.
 4.
@@ -34,3 +34,9 @@ Kelimenin olası halleri {'ürkmesi', 'türkçesi'}
 
 Sayılar Nasıl Yazılır?
 http://tdk.gov.tr/icerik/yazim-kurallari/sayilarin-yazilisi/
+
+Kaynaklar :
+
+Yazım Denetimi için : https://github.com/MeteHanC/turkishnlp
+
+Türkçe Düzenleme için: https://github.com/emres/turkish-deasciifier
